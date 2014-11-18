@@ -70,6 +70,17 @@ class List
   end
  end
 
+ def size()
+  current_node = @head
+  contador = 1
+  while current_node[:next]
+    current_node = current_node[:next]
+    contador += 1
+  end
+
+  return contador
+ end
+ 
  def to_s
   if @head
     s = ""

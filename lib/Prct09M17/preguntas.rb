@@ -1,11 +1,12 @@
 class Preguntas
-  attr_accessor :pregunta
+  attr_accessor :pregunta, :correcta
 
   include Comparable
     attr :dificultad
 
-  def initialize (dificultad, pregunta)
+  def initialize (dificultad, correcta, pregunta)
     @dificultad = dificultad
+    @correcta = correcta
     @pregunta = pregunta
   end
 
@@ -15,6 +16,10 @@ class Preguntas
 
   def obtenerRespuestas
     @respuestas
+  end
+
+  def obtenerCorrecta
+    correcta
   end
 
   def <=>(another)
