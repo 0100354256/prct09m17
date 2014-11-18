@@ -12,7 +12,9 @@ describe List do
   @p3 = SeleccionSimple.new(2, 3, "Pregunta 3", respuestas2)
 
   @n1 = List.new(@p1)
-  @n1.add([@p2, @p3])  
+  @n1.add([@p2, @p3])
+
+  @e1 = Examen.new(@n1)
  end    
 
  describe "Lista de Preguntas" do
@@ -25,8 +27,19 @@ describe List do
   it "# Pregunta 3" do
     expect(@n1.head[:next][:next][:value].to_s).to eq("Pregunta 3 \n E\nF\nG\nH \n")
   end
+ end
+
+ describe "Examen" do
   it "# Size" do
     expect(@n1.size()).to eq(3)
+  end
+  it "# Siguiente pregunta" do
+    expect(@e1.siguiente().to_s).to eq("Pregunta 1 \n A\nB\nC\nD \n")
+    expect(@e1.siguiente().to_s).to eq("Pregunta 2 \n V\nF \n")
+  end
+  it "# Respuesta del usuario" do
+    expect(@e1.respuesta(1)).to be(true)
+    expect(@e1.respuesta(2)).to be(false)
   end
  end
 end
