@@ -27,6 +27,6 @@ class Preguntas
   end
 
   def to_s
-    "#{@pregunta} #{"\n"} #{@respuestas.join("\n")} #{"\n"}"
+    "#{@pregunta} #{"\n"} #{@respuestas.join("\n ")} #{"\n"}"
  end
 end
