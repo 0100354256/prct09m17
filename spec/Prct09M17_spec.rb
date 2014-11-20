@@ -1,3 +1,4 @@
+# :nocov:
 require "Prct09M17"
 
 # ***** Practica 9 *********************************************************************
@@ -185,3 +186,4 @@ describe List do
   end
  end
 end
+# :nocov:
