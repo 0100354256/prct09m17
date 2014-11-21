@@ -18,4 +18,4 @@ respuestas2 = ["1. Respuesta Incorrecta", "2. Respuesta Incorrecta", "3. Respues
 @e1 = Examen.new(@n1)
 @i1 = Interfaz.new(@e1)
 
-@i1.responder()
+# @i1.responder()
